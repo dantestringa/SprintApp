@@ -6,7 +6,8 @@ import {
     agregarTarea,
     eliminarTarea,
     tareaId,
-    editarTarea
+    editarTarea,
+    postmanTarea
     
 } from '../controllers/tareasControler.js'
 
@@ -18,3 +19,5 @@ router.post('/addTareas', agregarTarea)
 router.delete('/eliminar/:id', eliminarTarea)
 router.get('/tareas/:id', tareaId) 
 router.put('/editar/:id', editarTarea)
+
+router.get('/tareas', postmanTarea)

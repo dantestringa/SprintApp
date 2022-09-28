@@ -24,6 +24,26 @@ export const recibirTarea = (req, res) => {
         }
     })
 }
+// Para ver en postman usar http://localhost:8080/tareas
+export const postmanTarea = (req, res) => {
+    MongoClient.connect(process.env.MONGOLOCAL, (error, db) => {
+        const database = db.db(process.env.DATABASE)
+        if (error) {
+            console.log('Error en la conexion');
+        } else{
+            console.log(`Base de Datos conectada a ${database}`);
+            database.collection('tareas').find({}).toArray((error, result) =>{
+                if(error){
+                    console.log('Error en la conexion');
+                }else{
+                    res.json(result)
+                }
+            })
+        }
+    })
+}
+
+
 
 export const agregarTarea = (req, res) => {
     MongoClient.connect(process.env.MONGOLOCAL, (error, db) => {
