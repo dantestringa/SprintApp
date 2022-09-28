@@ -1,0 +1,28 @@
+<div class="container text-center m-50%">
+    <hr>
+        <h1>Lista de Tareas</h1>
+    <hr>
+</div>
+
+<div class="mx-6">
+<table class="table table-dark table-hover text-center">
+    <thead>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Descripcion</th>
+        <th>Nivel</th>
+    </thead>
+    <tbody>
+        {{#each result}}
+        <tr>
+            <td>{{titulo}}</td>
+            <td>{{autor}}</td>
+            <td>{{descpricion}}</td>
+            <td>{{nivel}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
+
+<script src="../controllers/tareasControler.js"></script>
