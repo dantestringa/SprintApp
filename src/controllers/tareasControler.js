@@ -118,6 +118,6 @@ export const tareaId = (req, res) => {
 
 
 export const editarTarea = (req, res) => {
-    
+    res.render('editarTarea')
 }
 

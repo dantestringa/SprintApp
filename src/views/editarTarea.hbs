@@ -1,0 +1,68 @@
+<hr>
+<div class="m-5 text-center">
+    <h1>
+        Formulario para editar Tareas
+    </h1>
+</div>
+<hr>
+
+<div class="container m-3">
+        <form action="/editarTarea" method="post">
+            <div class="mb-3 row">
+                <label for="titulo" class="col-sm-2">Titulo:</label>
+                <div class="col-sm-10">
+                    <input 
+                        type="text"  
+                        class="form-control"
+                        id="titulo"
+                        name="titulo"
+                        value="" 
+                        aria-label="default input example"
+                        placeholder="Ingrese el titulo">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="autor" class="col-sm-2">Autor:</label>
+                <div class="col-sm-10">
+                    <input 
+                        type="text" 
+                        class="form-control"
+                        id="autor"
+                        name="autor"
+                        value="" 
+                        aria-label="default input example"
+                        placeholder="Ingrese el autor">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="descripcion" class="col-sm-2">Descripcion:</label>
+                <div class="col-sm-10">
+                    <textarea 
+                        class="form-control"
+                        id="descripcion"
+                        name="descripcion"
+                        value="" 
+                        aria-label="default input example"
+                        placeholder="Ingrese la descripcion">
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="nivel" class="col-sm-2">Nivel:</label>
+                <div class="col-sm-10">
+                    <select class="form-select" id="nivel" name="nivel" required>
+                        <option selected disabled value="">Seleccionar importancia</option>
+                        <option>Baja</option>
+                        <option>Media</option>
+                        <option>Urgente</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="button btn btn-primary" value="Enviar Datos">Enviar</button>
+        </form>
+        <br>
+        
+</div>

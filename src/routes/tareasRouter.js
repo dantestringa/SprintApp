@@ -18,6 +18,8 @@ router.get('/listaTareas', recibirTarea)
 router.post('/addTareas', agregarTarea)
 router.delete('/eliminar/:id', eliminarTarea)
 router.get('/tareas/:id', tareaId) 
-router.put('/editar/:id', editarTarea)
+//router.put('/editar/:id', editar)
 
 router.get('/tareas', postmanTarea)
+
+router.get('/editarTarea', editarTarea)
